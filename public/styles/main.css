@@ -1,0 +1,41 @@
+ /* PROJECT DEMOLISH
+ * By: Carson, Parth, and Florence
+ */
+
+
+/* Overrides */
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  display: inline-block;
+}
+
+ol li, ul li {
+  list-style: none;
+}
+
+/* Global Elements */
+
+body {
+  color: #333;
+}
+
+/* Header */
+.jumbotron {
+  background: url('../images/demolish-collage.jpg') fixed no-repeat;
+  background-size: cover;
+  /*max-height: 100vh;*/
+  height: 800px;
+  padding: 1em 2em;
+}
+
+.jumbotron .menu {
+  position: relative;
+  text-align: center;
+  top: 50%;
+}
+
+.placeholder-cards .col {
+  border: 1px solid #000;
+  border-radius: 5px;
+}
