@@ -20,7 +20,7 @@ twilio.messages.create({
 });
 
 //console.log("In twilio.js");
-
+//https://www.twilio.com/labs/twimlets/echo USE THIS LINK TO ADD VOICE XML FILE
 
 twilio.calls.create({
   url: "http://twimlets.com/echo?Twiml=%3CResponse%3E%0A%3CSay%20voice%3D%22alice%22%3EHi%20there.%20You%20are%20stupid.%3C%2FSay%3E%0A%3C%2FResponse%3E&",
