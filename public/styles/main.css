@@ -2,16 +2,23 @@
  * By: Carson, Parth, and Florence
  */
 
+/* Responsive */
+@-ms-viewport {
+	width: device-width;
+}
 
 /* Overrides */
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
-  display: inline-block;
+  text-align: center;
 }
 
-ol li, ul li {
+ol, ul, ol li, ul li {
   list-style: none;
+  display: inline-block;
+  margin: 0 0.5em;
+  padding: 0;
 }
 
 /* Global Elements */
@@ -20,37 +27,32 @@ body {
   color: #333;
 }
 
+a, a:visited, a:hover, a:active {
+  color: #333;
+  transition: ease all 0.5s;
+}
+
+a:hover, a:active {
+  opacity: 0.5;
+}
+
 /* Header */
-.jumbotron {
-  background: url('../images/demolish-collage.jpg') fixed no-repeat;
-  background-size: cover;
-  /*max-height: 100vh;*/
-  height: 800px;
-  padding: 1em 2em;
+.app-title {
+  font-size: 5em;
+  text-shadow: 5px 5px 2px #000;
 }
 
-.jumbotron .menu {
-  position: relative;
-  text-align: center;
-  top: 50%;
+.header-scroll-icon {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+  font-size: 3em;
+  opacity: 0.7;
 }
 
-.placeholder-cards .col {
-  border: 1px solid #000;
-  border-radius: 5px;
-}
-
-
-
-.btn-primary {
-  margin-right: 200px;
-}
-
+/* Menu */
 #menu {
   text-align: center;
-  backround: #eee;
-  /*padding-bottom: 40px;*/
-
+  min-height: 100vh;
 }
 
 .menu-course {
@@ -62,47 +64,41 @@ body {
   padding: 5px 0 5px 15px;
 }
 
-.menu-container {
-  /*position: relative;*/
+.menu-container, .card-container {
   border: 1px solid #000;
   border-radius: 5px;
-  /*margin-bottom: 900px;*/
-  /*width:125px;*/
   text-align: center;
+  padding: 10px;
+  margin: 0 0 1em 0;
 }
 
-.col{
-  text-align: center;
+/* Footer */
+
+#menu, footer {
+  padding: 5em 0 0 0;
 }
 
-/*.menu-main-item {
-  border: 1px solid #000;
-  border-radius: 5px;
-  margin-bottom: 900px;
-  width:125px;
-  text-align: center;
-}*/
-
-/*#app-the-header {
-  margin-right: 100px;
-  padding-bottom: 10px
-}*/
-
-/*#fries {
-  margin-left: 533px;
-  margin-right: 530px;
-  width: auto;
-  height: 80px;
-}*/
-
-/*#mains-the-header {
-  margin-right: 100px;
-  padding-bottom: 10px;
+.placeholder-cards {
+  min-height: 400px;
+  height: 50vh;
 }
 
-#tacos {
-  margin-left: 533px;
-  margin-right: 530px;
+.footer__app-details {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+  position: relative;
+  background: #eee;
+  min-height: 300px;
+  height: 30vh;
+  color: #000;
+  font-size: 2em;
+  padding: 0 0 3em 0;
 }
-*/
 
+.address li {
+  display: block;
+}
+
+.credentials {
+  font-size: 0.5em;
+}

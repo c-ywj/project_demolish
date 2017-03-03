@@ -1,0 +1,118 @@
+/* PARALLAX SCROLL EFFECTS */
+.parallax {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  /*padding-top:3em;*/
+  /*padding-bottom:3em*/
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 300px;
+  perspective: 300px;
+  -webkit-perspective-origin-x: 100%;
+  perspective-origin-x: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.parallax-section {
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  height: auto;
+}
+
+.parallax-layer {
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  -webkit-transform-origin-x: 100%;
+  transform-origin-x:100%;
+}
+
+/*.parallax-layer-front {
+  -webkit-transform: translateZ(90px) scale(.7);
+  transform: translateZ(90px) scale(.7);
+  z-index:1;
+}*/
+
+.parallax-layer-base {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  z-index:4;
+}
+
+.parallax-layer-back {
+  -webkit-transform: translateZ(-200px) scale(1.75);
+  transform: translateZ(-200px) scale(1.75);
+  z-index: 3;
+  /*margin-left: -10px;*/
+}
+
+
+/* PARALLAX INDIVIDUAL SECTIONS */
+
+/* Parallax Header Section */
+#section-1 {
+    z-index: 1;
+    color: #fff;
+    min-height: 700px;
+    height: 100vh;
+}
+
+#section-3 {
+    z-index: 1;
+    color: #fff;
+    min-height: 400px;
+    height: 70vh;
+}
+
+/* Content Sections */
+#section-2, #section-4 {
+    z-index: 2;
+    position: relative;
+    background: #fff;
+    width: 100%;
+}
+
+.overlay {
+  background: rgba(0,0,0,0.5);
+  /*height: inherit;*/
+}
+
+/* Parallax Background Layers */
+#section-1 .parallax-layer-back {
+    background: url("../images/demolish-collage.jpg");
+}
+
+#section-3 .parallax-layer-back {
+  background: url("../images/demolish2.jpg")
+}
+
+#section-1 .parallax-layer-back, #section-3 .parallax-layer-back {
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.flex-center {
+  position: relative;
+  top: 50%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 1em;
+}

@@ -2,175 +2,232 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>DEMOLISH</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DEMOLISH | Food you will devour instantly...</title>
+
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+  <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
+  <!-- <link rel="stylesheet" href="/styles/layout.css" type="text/css" /> -->
+  <link rel="stylesheet" href="./styles/main.css">
+
   <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="/styles/parallax.css">
+  <!-- <link rel="stylesheet" href="parallax.min.css"> -->
+
 </head>
 <body>
-  <header class="jumbotron">
-    <div>
-      <img src="http://lorempixel.com/40/40/" alt=""/>
-      <span>DEMOLISH</span>
-    </div>
-    <nav class="navi">
-    <!-- <% include ./menu-modal.ejs %> -->
+
+  <!-- PARALLAX WRAPPER -->
+  <div class="parallax">
+    <a name="top"></a>
+
+  <!-- PARALLAX LAYER 1 --> 
+    <header id="section-1" class="parallax-section">
+      <div class="overlay parallax-layer parallax-layer-base">
+        <div class="flex-center">
+          <h1 class="app-title">DEMOLISH</h1>
+        </div>
+        <div class="header-scroll-icon flex-center">
+          <a href="#menu">
+            <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="parallax-layer parallax-layer-back">
+      </div>
+    </header>
 
 
-        <!-- <input class="btn btn-default" type="button" value="MENU" /> -->
+  <!-- PARALLAX LAYER 2 -->
+    <main id="section-2" class="container">
 
-        <!-- Button trigger modal -->
-        <!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-          Browse Our Menu
-        </button> -->
+      <div id="menu" class="row">
+        <span><h3>Menu</h3></span>
 
-        <!-- Modal -->
-        <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Menu</h4>
-              </div>
-              <div class="modal-body">
-                ...
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Proceed to checkout</button>
-              </div>
+        <section id="appetizers" class="menu-course">
+          <div id="app-the-header" class="menu-course__heading">
+            <span><h4>Appetizers</h4></span>
+          </div>
+
+          <article id="chicken" class="menu-item col col-md-4">
+            <div class="menu-container"><!-- ITEM image, name, description price -->
+            <!-- <img class="chicken" src="./images/chicken-wings.jpg" /> -->
+            Chicken Wings
+              <div id="price">Price:</div>
             </div>
+          </article>
+
+          <article id="fries" class="menu-item col col-md-4">
+            <div class="menu-container">
+            <!-- ITEM image, name, description price -->
+            Fries
+              <div id="price">Price:</div>
+            </div>
+          </article>
+
+          <article id="brushcetta" class="menu-item col col-md-4">
+            <div class="menu-container">
+            <!-- ITEM image, name, description price -->
+            Bruschetta
+              <div id="price">Price:</div>
+            </div>
+          </article>
+        </section>
+
+        <section id="mains" class="menu-course">
+          <div id="mains-the-header" class="menu-course__heading">
+            <span><h4>Mains</h4></span>
           </div>
-        </div> -->
 
-    </nav>
-  </header>
-  <main class="container">
-   <!--  <div class="row placeholder-cards">
-      <div class="col col-md-4">
-        <span>JOIN US</span>
-      </div>
-      <div class="col col-md-4">
-        <span>Click here for a foodgasm!!!</span>
-      </div>
-      <div class="col col-md-4">
-        <span>About Us</span>
-      </div>
-    </div> -->
+          <article id="pizza" class="menu-item col col-md-4">
+            <div class="menu-container">
+            <!-- ITEM image, name, description price -->
+            <!-- <img class="chicken" src="./images/chicken-wings.jpg" /> -->
+            Pizza
+              <div id="price">Price:</div>
+            </div>
+          </article>
 
-    <div id="menu" class="row">
-      <span><h3>Menu</h3></span>
+          <article id="tacos" class="menu-item col col-md-4">
+            <div class="menu-container">
+            <!-- ITEM image, name, description price -->
+            Fish Tacos
+              <div id="price">Price:</div>
+            </div>
+          </article>
 
-      <section id="appetizers" class="menu-course">
-        <div id="app-the-header" class="menu-course__heading">
-          <span><h4>Appetizers</h4></span>
+          <article id="burger" class="menu-item col col-md-4">
+            <div class="menu-container">
+            <!-- ITEM image, name, description price -->
+            Vegan Burger
+              <div id="price">Price:</div>
+            </div>
+          </article>
+        </section>
+
+
+        <section id="dessert" class="menu-course">
+          <div id="app-the-header" class="menu-course__heading">
+            <span><h4>Appetizers</h4></span>
+          </div>
+
+          <article id="blueberry-pizza" class="menu-item col col-md-4">
+            <div class="menu-container"><!-- ITEM image, name, description price -->
+            <!-- <img class="chicken" src="./images/chicken-wings.jpg" /> -->
+            Blueberry Dessert Pizza
+              <div id="price">Price:</div>
+            </div>
+          </article>
+
+          <article id="cinnamon-bun" class="menu-item col col-md-4">
+            <div class="menu-container">
+            <!-- ITEM image, name, description price -->
+            Cinnamon Bun
+              <div id="price">Price:</div>
+            </div>
+          </article>
+
+          <article id="lava-cake" class="menu-item col col-md-4">
+            <div class="menu-container">
+            <!-- ITEM image, name, description price -->
+            Chocolate Lava Cake
+            <div id="price">Price:</div>
+            </div>
+
+          </article>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- PARALLAX LAYER 3 (BACKGROUND) -->
+
+    <div id="section-3" class="parallax-section">
+      <div class="parallax-layer parallax-layer-back">
+        <div class="overlay parallax-layer parallax-layer-base">
         </div>
+      </div>
+    </div>
 
-        <article id="chicken" class="menu-item col col-md-4">
-          <div class="menu-container"><!-- ITEM image, name, description price -->
-          <!-- <img class="chicken" src="./images/chicken-wings.jpg" /> -->
-          Chicken Wings
-            <div id="price">Price:</div>
+    <!-- PARALLAX LAYER 4 -->
+    <footer id="section-4">
+      <section class="container placeholder-cards">
+        <article class="col col-md-4">
+          <div class="card-container">
+            <h3>Join Us</h3>
           </div>
         </article>
-
-        <article id="fries" class="menu-item col col-md-4">
-          <div class="menu-container">
-          <!-- ITEM image, name, description price -->
-          Fries
-            <div id="price">Price:</div>
+        <article class="col col-md-4">
+          <div class="card-container">
+            <h3>Click here for a foodgasm!!!</h3>
           </div>
         </article>
-
-        <article id="brushcetta" class="menu-item col col-md-4">
-          <div class="menu-container">
-          <!-- ITEM image, name, description price -->
-          Bruschetta
-            <div id="price">Price:</div>
+        <article class="col col-md-4">
+          <div class="card-container">
+            <h3>About Us</h3>
+            <ul class="address">
+              <li>
+                <span>
+                  46 Spadina Avenue
+                </span>
+              </li>
+              <li>
+                <span>
+                  Toronto, ON M5V 2H8
+                </span>
+              </li>
+              <li>
+                <span>
+                  +1-647-360-6821
+                </span>
+              </li>
+            </ul>
           </div>
         </article>
       </section>
 
-      <section id="mains" class="menu-course">
-        <div id="mains-the-header" class="menu-course__heading">
-          <span><h4>Mains</h4></span>
+      <div class="scroll-to-top flex-center">
+        <a href="#top">
+          <i class="fa fa-arrow-up" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <section class="footer__app-details">
+        <div class="social-media flex-center">
+          <ul>
+            <li>
+              <a href="http://www.facebook.com/">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="http://www.instagram.com/">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="http://www.twitter.com/">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
         </div>
 
-        <article id="pizza" class="menu-item col col-md-4">
-          <div class="menu-container">
-          <!-- ITEM image, name, description price -->
-          <!-- <img class="chicken" src="./images/chicken-wings.jpg" /> -->
-          Pizza
-            <div id="price">Price:</div>
-          </div>
-        </article>
-
-        <article id="tacos" class="menu-item col col-md-4">
-          <div class="menu-container">
-          <!-- ITEM image, name, description price -->
-          Fish Tacos
-            <div id="price">Price:</div>
-          </div>
-        </article>
-
-        <article id="burger" class="menu-item col col-md-4">
-          <div class="menu-container">
-          <!-- ITEM image, name, description price -->
-          Vegan Burger
-            <div id="price">Price:</div>
-          </div>
-        </article>
-      </section>
-
-
-      <section id="dessert" class="menu-course">
-        <div id="app-the-header" class="menu-course__heading">
-          <span><h4>Appetizers</h4></span>
+        <div class="credentials flex-center">
+          &copy; Demolish &mdash; 2017
         </div>
-
-        <article id="blueberry-pizza" class="menu-item col col-md-4">
-          <div class="menu-container"><!-- ITEM image, name, description price -->
-          <!-- <img class="chicken" src="./images/chicken-wings.jpg" /> -->
-          Blueberry Dessert Pizza
-            <div id="price">Price:</div>
-          </div>
-        </article>
-
-        <article id="cinnamon-bun" class="menu-item col col-md-4">
-          <div class="menu-container">
-          <!-- ITEM image, name, description price -->
-          Cinnamon Bun
-            <div id="price">Price:</div>
-          </div>
-        </article>
-
-        <article id="lava-cake" class="menu-item col col-md-4">
-          <div class="menu-container">
-          <!-- ITEM image, name, description price -->
-          Chocolate Lava Cake
-          <div id="price">Price:</div>
-          </div>
-
-        </article>
       </section>
+    </footer>
 
-    </div>
-  </main>
-
-  <footer class="container-fluid">
-   <div class="row placeholder-cards">
-    <div class="col col-md-4">
-      <span>JOIN US</span>
-    </div>
-    <div class="col col-md-4">
-      <span>Click here for a foodgasm!!!</span>
-    </div>
-    <div class="col col-md-4">
-      <span>About Us</span>
-    </div>
   </div>
-  </footer>
+  <!--/ PARALLAX WRAPPER -->
 
-  <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
-  <script type="text/javascript" src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+    <script type="text/javascript" src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/e957f15459.js"></script>
+
 </body>
+
 </html>
