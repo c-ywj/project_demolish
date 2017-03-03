@@ -5,19 +5,31 @@
 
 /* Overrides */
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
-  display: inline-block;
+  text-align: center;
 }
 
-ol li, ul li {
+ol, ul, ol li, ul li {
   list-style: none;
+  display: inline-block;
+  margin: 0 0.5em;
+  padding: 0;
 }
 
 /* Global Elements */
 
 body {
   color: #333;
+}
+
+a, a:visited, a:hover, a:active {
+  color: #fff;
+  transition: ease all 0.5s;
+}
+
+a:hover, a:active {
+  opacity: 0.5;
 }
 
 /* Header */
@@ -35,17 +47,24 @@ body {
   padding: 5px 0 5px 15px;
 }
 
-.menu-container {
+.menu-container, .card-container {
   border: 1px solid #000;
   border-radius: 5px;
   text-align: center;
+  padding: 10px;
 }
 
-/*footer {
-  height: 100vh;
-}*/
+.footer__app-details {
+  background: #111;
+  height: 30vh;
+  color: #fff;
+  font-size: 2em;
+}
 
-.placeholder-cards .col {
-  border: 1px solid #000;
-  border-radius: 5px;
+.address li {
+  display: block;
+}
+
+.credentials {
+  font-size: 0.5em;
 }
