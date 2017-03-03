@@ -39,3 +39,70 @@ body {
   border: 1px solid #000;
   border-radius: 5px;
 }
+
+
+
+.btn-primary {
+  margin-right: 200px;
+}
+
+#menu {
+  text-align: center;
+  backround: #eee;
+  /*padding-bottom: 40px;*/
+
+}
+
+.menu-course {
+  margin: 100px 0;
+}
+
+.menu-course__heading {
+  text-align: left;
+  padding: 5px 0 5px 15px;
+}
+
+.menu-container {
+  /*position: relative;*/
+  border: 1px solid #000;
+  border-radius: 5px;
+  /*margin-bottom: 900px;*/
+  /*width:125px;*/
+  text-align: center;
+}
+
+.col{
+  text-align: center;
+}
+
+/*.menu-main-item {
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-bottom: 900px;
+  width:125px;
+  text-align: center;
+}*/
+
+/*#app-the-header {
+  margin-right: 100px;
+  padding-bottom: 10px
+}*/
+
+/*#fries {
+  margin-left: 533px;
+  margin-right: 530px;
+  width: auto;
+  height: 80px;
+}*/
+
+/*#mains-the-header {
+  margin-right: 100px;
+  padding-bottom: 10px;
+}
+
+#tacos {
+  margin-left: 533px;
+  margin-right: 530px;
+}
+*/
+
