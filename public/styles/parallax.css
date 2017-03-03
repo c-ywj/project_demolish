@@ -72,6 +72,10 @@
 }
 
 /* Content Sections */
+#section-2 {
+  min-height: 100vh;
+}
+
 #section-2, #section-4 {
     z-index: 2;
     position: relative;

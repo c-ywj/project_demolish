@@ -41,34 +41,35 @@
 
 
   <!-- PARALLAX LAYER 2 -->
-    <main id="section-2" class="container">
+    <main id="section-2" class="menu container">
 
-      <div id="menu" class="row">
+      <section id="menu" class="menu-container col col-md-9">
+        <!-- Populated menu items -->
         <span><h3>Menu</h3></span>
 
-        <section id="appetizers" class="menu-course">
+        <section id="appetizers" class="menu-course row">
           <div id="app-the-header" class="menu-course__heading">
             <span><h4>Appetizers</h4></span>
           </div>
 
-          <article id="chicken" class="menu-item col col-md-4">
-            <div class="menu-container"><!-- ITEM image, name, description price -->
+          <article data-item-name="" id="chicken" class="menu-item col col-md-4">
+            <div class=""><!-- ITEM image, name, description price -->
             <!-- <img class="chicken" src="./images/chicken-wings.jpg" /> -->
             Chicken Wings
               <div id="price">Price:</div>
             </div>
           </article>
 
-          <article id="fries" class="menu-item col col-md-4">
-            <div class="menu-container">
+          <article data-item-name="" id="fries" class="menu-item col col-md-4">
+            <div class="">
             <!-- ITEM image, name, description price -->
             Fries
               <div id="price">Price:</div>
             </div>
           </article>
 
-          <article id="brushcetta" class="menu-item col col-md-4">
-            <div class="menu-container">
+          <article data-item-name="" id="brushcetta" class="menu-item col col-md-4">
+            <div class="">
             <!-- ITEM image, name, description price -->
             Bruschetta
               <div id="price">Price:</div>
@@ -81,8 +82,8 @@
             <span><h4>Mains</h4></span>
           </div>
 
-          <article id="pizza" class="menu-item col col-md-4">
-            <div class="menu-container">
+          <article data-item-name="" id="pizza" class="menu-item col col-md-4">
+            <div class="">
             <!-- ITEM image, name, description price -->
             <!-- <img class="chicken" src="./images/chicken-wings.jpg" /> -->
             Pizza
@@ -90,16 +91,16 @@
             </div>
           </article>
 
-          <article id="tacos" class="menu-item col col-md-4">
-            <div class="menu-container">
+          <article data-item-name="" id="tacos" class="menu-item col col-md-4">
+            <div class="">
             <!-- ITEM image, name, description price -->
             Fish Tacos
               <div id="price">Price:</div>
             </div>
           </article>
 
-          <article id="burger" class="menu-item col col-md-4">
-            <div class="menu-container">
+          <article data-item-name="" id="burger" class="menu-item col col-md-4">
+            <div class="">
             <!-- ITEM image, name, description price -->
             Vegan Burger
               <div id="price">Price:</div>
@@ -107,30 +108,29 @@
           </article>
         </section>
 
-
         <section id="dessert" class="menu-course">
           <div id="app-the-header" class="menu-course__heading">
             <span><h4>Appetizers</h4></span>
           </div>
 
-          <article id="blueberry-pizza" class="menu-item col col-md-4">
-            <div class="menu-container"><!-- ITEM image, name, description price -->
+          <article data-item-name="" id="blueberry-pizza" class="menu-item col col-md-4">
+            <div class=""><!-- ITEM image, name, description price -->
             <!-- <img class="chicken" src="./images/chicken-wings.jpg" /> -->
             Blueberry Dessert Pizza
               <div id="price">Price:</div>
             </div>
           </article>
 
-          <article id="cinnamon-bun" class="menu-item col col-md-4">
-            <div class="menu-container">
+          <article data-item-name="" id="cinnamon-bun" class="menu-item col col-md-4">
+            <div class="">
             <!-- ITEM image, name, description price -->
             Cinnamon Bun
               <div id="price">Price:</div>
             </div>
           </article>
 
-          <article id="lava-cake" class="menu-item col col-md-4">
-            <div class="menu-container">
+          <article data-item-name="" id="lava-cake" class="menu-item col col-md-4">
+            <div class="">
             <!-- ITEM image, name, description price -->
             Chocolate Lava Cake
             <div id="price">Price:</div>
@@ -138,8 +138,33 @@
 
           </article>
         </section>
+      </section>
 
-      </div>
+      <aside class="order-cart col col-md-3">
+        <!-- Real time order form -->
+
+        <div class="address-hours">
+          <span>
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+
+          46 Spadina Avenue, Toronto ON M5V 2H8
+          </span>
+          <br/>
+          Delivery Hours: 11am - 10pm
+        </div>
+
+        <div class="order-items">
+          <h3>Your Order</h3>
+
+        <!-- On click of menu-item, append item, price and qty here -->
+
+        <!-- Subtotal: $ EJS
+          Tax: $
+          Delivery Fee: $
+          Total: $
+         -->
+        </div>
+      </aside>
     </main>
 
     <!-- PARALLAX LAYER 3 (BACKGROUND) -->
