@@ -20,36 +20,84 @@ body {
   color: #333;
 }
 
-/* Header */
-.jumbotron {
-  background: url('../images/demolish-collage.jpg') fixed no-repeat;
-  background-size: cover;
-  /*max-height: 100vh;*/
-  height: 800px;
-  padding: 1em 2em;
+
+
+/* PARALLAX LAYERS */
+
+
+/*Parallax section*/
+#section-1 {
+    z-index: 1;
+    color: #fff;
+    height: 100vh;
+}
+/*#section-1 .row {
+    position: fixed;
+}*/
+/*Parallax background*/
+#section-1 .parallax-layer-back {
+    background: url("../images/demolish-collage.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+/*Section with dummy content*/
+#section-2, #section-4 {
+    z-index: 2;
+    position: relative;
+    background: #fff;
+    width: 100%;
 }
 
-.jumbotron .menu {
+/* Section 3 */
+#section-3 {
+  z-index: 1;
+  color: #fff;
+  height: 100vh;
+}
+
+#section-3 .parallax-layer-back {
+  background: url("../images/demolish2.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+ /*Section 4 
+#section-4 {
+  z-index: 2;
+  position: relative;
+  background: #fff;
+  width: 100%;
+}*/
+
+.flex-center {
   position: relative;
   text-align: center;
   top: 50%;
 }
 
-.placeholder-cards .col {
-  border: 1px solid #000;
-  border-radius: 5px;
+
+.overlay {
+  background: rgba(0,0,0,0.6);
+  /*height: inherit;*/
 }
 
-
-.btn-primary {
-  margin-right: 200px;
+/* Header */
+.jumbotron {
+  /*background: url('../images/demolish-collage.jpg') fixed no-repeat;*/
+  /*background: rgba(0,0,0,0.6);*/
+  /*background-size: cover;*/
+  /*height: 800px;*/
+  /*padding: 1em 2em;*/
 }
+
 
 #menu {
   text-align: center;
-  backround: #eee;
-  /*padding-bottom: 40px;*/
-
+  height: 100vh;
 }
 
 .menu-course {
@@ -62,45 +110,16 @@ body {
 }
 
 .menu-container {
-  /*position: relative;*/
   border: 1px solid #000;
   border-radius: 5px;
-  /*margin-bottom: 900px;*/
-  /*width:125px;*/
   text-align: center;
 }
 
-.col{
-  text-align: center;
-}
+/*footer {
+  height: 100vh;
+}*/
 
-/*.menu-main-item {
+.placeholder-cards .col {
   border: 1px solid #000;
   border-radius: 5px;
-  margin-bottom: 900px;
-  width:125px;
-  text-align: center;
-}*/
-
-/*#app-the-header {
-  margin-right: 100px;
-  padding-bottom: 10px
-}*/
-
-/*#fries {
-  margin-left: 533px;
-  margin-right: 530px;
-  width: auto;
-  height: 80px;
-}*/
-
-/*#mains-the-header {
-  margin-right: 100px;
-  padding-bottom: 10px;
 }
-
-#tacos {
-  margin-left: 533px;
-  margin-right: 530px;
-}
-*/
