@@ -56,11 +56,17 @@
 
 /* PARALLAX INDIVIDUAL SECTIONS */
 
-/* Parallax Section 1 */
-#section-1, #section-3 {
+/* Parallax Header Section */
+#section-1 {
     z-index: 1;
     color: #fff;
     height: 100vh;
+}
+
+#section-3 {
+    z-index: 1;
+    color: #fff;
+    height: 70vh;
 }
 
 /* Content Sections */
@@ -72,8 +78,8 @@
 }
 
 .overlay {
-  background: rgba(0,0,0,0.6);
-  height: inherit;
+  background: rgba(0,0,0,0.5);
+  /*height: inherit;*/
 }
 
 /* Parallax Background Layers */

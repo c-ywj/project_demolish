@@ -33,6 +33,17 @@ a:hover, a:active {
 }
 
 /* Header */
+.app-title {
+  font-size: 5em;
+  text-shadow: 5px 5px 2px #000;
+}
+
+.header-scroll-icon {
+  font-size: 3em;
+  opacity: 0.7;
+}
+
+/* Menu */
 #menu {
   text-align: center;
   height: 100vh;
@@ -54,9 +65,20 @@ a:hover, a:active {
   padding: 10px;
 }
 
+/* Footer */
+
+#menu, footer {
+  padding: 5em 0 0 0;
+}
+
+.placeholder-cards {
+  height: 50vh;
+}
+
 .footer__app-details {
+  position: relative;
   background: #111;
-  height: 30vh;
+  height: 40vh;
   color: #fff;
   font-size: 2em;
 }
