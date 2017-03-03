@@ -14,5 +14,10 @@ module.exports = (knex) => {
     });
   });
 
+  userRoutes.post("/", (req, res) => {
+    knex
+      
+  });
+
   return userRoutes;
 }
