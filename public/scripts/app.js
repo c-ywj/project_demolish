@@ -57,6 +57,7 @@ let order = [
 
 $(() => {
 
+<<<<<<< HEAD
   const getMenu = () => {
     $.ajax({
       method: 'GET',
@@ -103,3 +104,16 @@ $(() => {
   // });;
 
 });
+=======
+  $.ajax({
+    method: "GET",
+    url: "/api/users"
+  }).done((users) => {
+    for(user of users) {
+      $("<div>").text(user.name).appendTo($("body"));
+    }
+  });
+});
+
+
+>>>>>>> 69794a45df13ffdbb6b6821649220a952767dc53
