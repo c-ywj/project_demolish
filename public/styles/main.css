@@ -2,6 +2,10 @@
  * By: Carson, Parth, and Florence
  */
 
+/* Responsive */
+@-ms-viewport {
+	width: device-width;
+}
 
 /* Overrides */
 
@@ -24,7 +28,7 @@ body {
 }
 
 a, a:visited, a:hover, a:active {
-  color: #fff;
+  color: #333;
   transition: ease all 0.5s;
 }
 
@@ -39,6 +43,8 @@ a:hover, a:active {
 }
 
 .header-scroll-icon {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
   font-size: 3em;
   opacity: 0.7;
 }
@@ -46,7 +52,7 @@ a:hover, a:active {
 /* Menu */
 #menu {
   text-align: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .menu-course {
@@ -63,6 +69,7 @@ a:hover, a:active {
   border-radius: 5px;
   text-align: center;
   padding: 10px;
+  margin: 0 0 1em 0;
 }
 
 /* Footer */
@@ -72,15 +79,20 @@ a:hover, a:active {
 }
 
 .placeholder-cards {
+  min-height: 400px;
   height: 50vh;
 }
 
 .footer__app-details {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
   position: relative;
-  background: #111;
-  height: 40vh;
-  color: #fff;
+  background: #eee;
+  min-height: 300px;
+  height: 30vh;
+  color: #000;
   font-size: 2em;
+  padding: 0 0 3em 0;
 }
 
 .address li {
