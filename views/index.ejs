@@ -52,7 +52,7 @@
             <span><h4>Appetizers</h4></span>
           </div>
 
-          <article data-item-id="1" id="chicken" class="menu-item col col-md-4">
+          <article data-item-id="1" data-item-name="chicken" class="menu-item col col-md-4">
             <div class=""><!-- ITEM image, name, description price -->
             <!-- <img class="chicken" src="./images/chicken-wings.jpg" /> -->
             Chicken Wings
@@ -60,7 +60,7 @@
             </div>
           </article>
 
-          <article data-item-id="2" id="fries" class="menu-item col col-md-4">
+          <article data-item-id="2" data-item-name="fries" class="menu-item col col-md-4">
             <div class="">
             <!-- ITEM image, name, description price -->
             Fries
@@ -68,7 +68,7 @@
             </div>
           </article>
 
-          <article data-item-id="3" id="brushcetta" class="menu-item col col-md-4">
+          <article data-item-id="3" data-item-name="brushcetta" class="menu-item col col-md-4">
             <div class="">
             <!-- ITEM image, name, description price -->
             Bruschetta
@@ -156,6 +156,9 @@
         <div class="order-items">
           <h3>Your Order</h3>
 
+          <ul class="cart-items">
+
+          </ul>
         <!-- On click of menu-item, append item, price and qty here -->
 
         <!-- Subtotal: $ EJS
@@ -163,6 +166,8 @@
           Delivery Fee: $
           Total: $
          -->
+
+         <input type="button" value="Checkout"/>
         </div>
       </aside>
     </main>
