@@ -14,6 +14,8 @@ const knex        = require("knex")(knexConfig[ENV]);
 const morgan      = require('morgan');
 const knexLogger  = require('knex-logger');
 
+// const menuRoutes = require('./routes/menu.js');
+
 // Seperated Routes for each Resource
 const usersRoutes = require("./routes/users");
 // const menuRoutes  = require("./routes/menu");
@@ -45,6 +47,8 @@ app.use(express.static("public"));
 app.get("/", (req, res) => {
   res.render("index");
 });
+
+// app.use(menuRoutes);
 
 app.listen(PORT, () => {
   console.log("Example app listening on port " + PORT);
