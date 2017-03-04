@@ -141,8 +141,6 @@
       </section>
 
       <aside class="order-cart col col-md-3">
-        <!-- Real time order form -->
-
         <div class="address-hours">
           <span>
           <i class="fa fa-map-marker" aria-hidden="true"></i>
@@ -155,17 +153,21 @@
 
         <div class="order-items">
           <h3>Your Order</h3>
+          <ul class="cart-items"></ul>
+          <div>
             <form action="/orders" method="post" class="customer-info">
-            <label for="customer-name">Name:</label>
-            <input type="text" name="customer-name" placeholder="Enter your name here" maxlength="100">
-            <br>
-            <label for="customer-phone">Phone:</label>
-            <input type="text" name="customer-phone" placeholder="Enter your phone here" maxlength="70">
+              <label for="customer-name">Name:</label>
+              <input type="text" name="customer-name" placeholder="Enter your name here" maxlength="100">
+              <br>
+              <label for="customer-phone">Phone:</label>
+              <input type="text" name="customer-phone" placeholder="Enter your phone here" maxlength="70">
+              <br>
+              <button type="submit">Check out</button>
             </form>
-            <br>
-            <button type="submit">Check out</button>
+          </div>
         </div>
       </aside>
+
     </main>
 
     <!-- PARALLAX LAYER 3 (BACKGROUND) -->
