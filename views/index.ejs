@@ -53,10 +53,9 @@
           </div>
 
           <article data-item-id="1" data-item-name="chicken" class="menu-item col col-md-4">
-            <div class="item-info">
-              <span class="dish-name">
-                Chicken Wings
-              </span>
+            <div class=""><!-- ITEM image, name, description price -->
+            <!-- <img class="chicken" src="./images/chicken-wings.jpg" /> -->
+            Chicken Wings
               <div id="price">Price:</div>
             </div>
           </article>
@@ -83,24 +82,24 @@
             <span><h4>Mains</h4></span>
           </div>
 
-          <article data-item-id="4" id="pizza" class="menu-item col col-md-4">
+          <article data-item-id="4" data-item-name="pizza" class="menu-item col col-md-4">
             <div class="">
-            <!-- ITEM image, name, description price -->
+            <!-- ITEM image, id, description price -->
             <!-- <img class="chicken" src="./images/chicken-wings.jpg" /> -->
             Pizza
               <div id="price">Price:</div>
             </div>
           </article>
 
-          <article data-item-id="5" id="tacos" class="menu-item col col-md-4">
+          <article data-item-id="5" data-item-name="tacos" class="menu-item col col-md-4">
             <div class="">
-            <!-- ITEM image, name, description price -->
+            <!-- ITEM image, id, description price -->
             Fish Tacos
               <div id="price">Price:</div>
             </div>
           </article>
 
-          <article data-item-id="6" id="burger" class="menu-item col col-md-4">
+          <article data-item-id="6" data-item-name="burger" class="menu-item col col-md-4">
             <div class="">
             <!-- ITEM image, name, description price -->
             Vegan Burger
@@ -111,28 +110,28 @@
 
         <section id="dessert" class="menu-course">
           <div id="app-the-header" class="menu-course__heading">
-            <span><h4>Appetizers</h4></span>
+            <span><h4>Desserts</h4></span>
           </div>
 
-          <article data-item-id="7" id="blueberry-pizza" class="menu-item col col-md-4">
-            <div class=""><!-- ITEM image, name, description price -->
+          <article data-item-id="7" data-item-name="blueberry-pizza" class="menu-item col col-md-4">
+            <div class=""><!-- ITEM image, id, description price -->
             <!-- <img class="chicken" src="./images/chicken-wings.jpg" /> -->
             Blueberry Dessert Pizza
               <div id="price">Price:</div>
             </div>
           </article>
 
-          <article data-item-id="8" id="cinnamon-bun" class="menu-item col col-md-4">
+          <article data-item-id="8" data-item-name="cinnamon-bun" class="menu-item col col-md-4">
             <div class="">
-            <!-- ITEM image, name, description price -->
+            <!-- ITEM image, id, description price -->
             Cinnamon Bun
               <div id="price">Price:</div>
             </div>
           </article>
 
-          <article data-item-id="9" id="lava-cake" class="menu-item col col-md-4">
+          <article data-item-id="9" data-item-name="lava-cake" class="menu-item col col-md-4">
             <div class="">
-            <!-- ITEM image, name, description price -->
+            <!-- ITEM image, id, description price -->
             Chocolate Lava Cake
             <div id="price">Price:</div>
             </div>
@@ -158,6 +157,27 @@
           <h3>Your Order</h3>
 
           <ul class="cart-items">
+
+<!-- TEMPORARY HARD-CODED CART ITEMS -->
+
+  <li data-cart-item="pizza">
+        <h3>Pizza</h3>
+        <div class="remove-item">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <div class="cart-qty pizza">
+          <span class="reduce-item"> 
+            <i class="fa fa-window-minimize" aria-hidden="true"></i>
+          </span>
+
+          Qty: 
+            <span class="cart-item__qty pizza">6</span>
+        </div>
+      </li>
+
+<!--/ TEMPORARY HARD-CODED CART ITEMS -->
+
+
 
           </ul>
         <!-- On click of menu-item, append item, price and qty here -->

@@ -1,13 +1,13 @@
 $(() => {
   let $orderCart = $('.order-items');
   let $cartItems = $('.cart-items');
-  $orderCart.hide();
+  // $orderCart.hide();
   
   let currentOrder = {};
 
   // add new item to cart
   $('.menu-item').on('click', function (ev) {
-    $orderCart.show();
+    // $orderCart.show();
 
     var itemId = $(ev.currentTarget).attr("data-item-id");
     var itemName = $(ev.currentTarget).attr("data-item-name");
@@ -37,20 +37,37 @@ $(() => {
       let someNum = $('.cart-qty').find(`.${itemName}`);
       someNum.remove();
       let update = `<span class="cart-item__qty ${itemName}">${currentOrder[itemName]['qty']}</span>`;
-      // debugger;
       
-      $('.cart-qty.' + itemName).append(update);   
+      $('.cart-qty.' + itemName).append(update);
     }
-    console.log(currentOrder);
+
+
+    // remove item from cart
+    $('.remove-item').on('click', function(e) {
+      let currCartItem = $(e.target).parent().parent().attr('data-cart-item');
+      $(e.target).parent().parent().remove();
+
+      delete currentOrder[currCartItem];
+      console.log('currCartItem: ', currCartItem);
+    });
+
+    // reduce item qty from cart
+    $('.reduce-item').on('click', function(e) {
+
+      // let itemQty = currentOrder[itemName]['qty'];
+      // itemQty - 1;
+
+      currentOrder[itemName]['qty'] - 1;
+
+      let someNum = $('.cart-qty').find(`.${itemName}`);
+      someNum.remove();
+      let update = `<span class="cart-item__qty ${itemName}">${currentOrder[itemName]['qty']}</span>`;
+      
+      $('.cart-qty.' + itemName).append(update);
+
+      console.log(currentOrder);
+    });
+  
   });
-
-  // remove item from cart
-  $('.remove-item').on('click', function(e) {
-    
-  })
-
-  // reduce item qty from cart
-
-
 
 });
