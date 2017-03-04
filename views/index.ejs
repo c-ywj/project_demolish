@@ -155,14 +155,15 @@
 
         <div class="order-items">
           <h3>Your Order</h3>
-
-        <!-- On click of menu-item, append item, price and qty here -->
-
-        <!-- Subtotal: $ EJS
-          Tax: $
-          Delivery Fee: $
-          Total: $
-         -->
+            <form action="/orders" method="post" class="customer-info">
+            <label for="customer-name">Name:</label>
+            <input type="text" name="customer-name" placeholder="Enter your name here" maxlength="100">
+            <br>
+            <label for="customer-phone">Phone:</label>
+            <input type="text" name="customer-phone" placeholder="Enter your phone here" maxlength="70">
+            </form>
+            <br>
+            <button type="submit">Check out</button>
         </div>
       </aside>
     </main>
