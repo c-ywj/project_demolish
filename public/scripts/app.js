@@ -11,14 +11,15 @@ $(() => {
 
     var itemId = $(ev.currentTarget).attr("data-item-id");
     var itemName = $(ev.currentTarget).attr("data-item-name");
+    // var 
 
     if(!currentOrder[itemName]) {
       currentOrder[itemName] = {itemId: itemId, qty: 1};
 
       let cartItem = `<li data-cart-item="${itemName}">
-        <h3>${itemName}</h3>
         <span>
           <i class="remove-item fa fa-times" aria-hidden="true"></i>
+          ${itemName}
         </span>
         <div class="cart-qty ${itemName}">
           Qty: 
@@ -36,10 +37,12 @@ $(() => {
       $cartItems.append(cartItem);
     } else {
       currentOrder[itemName]['qty'] += 1;
-      let currItemQty = currentOrder[itemName]['qty'];
-      let someNum = $('.cart-qty').find(`.${itemName}`);
+      let cartItemQty = currentOrder[itemName]['qty'];
+      let cartItem = $('.cart-qty').find(`.${itemName}`);
 
-      someNum.text(currItemQty);
+      cartItem.text(cartItemQty);
+
+      console.log(currentOrder);
     }
   });
 

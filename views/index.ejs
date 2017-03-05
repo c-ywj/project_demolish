@@ -1,6 +1,6 @@
 <!doctype html>
 <html>
-<head>
+<head lang="en">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>DEMOLISH | Food you will devour instantly...</title>
@@ -25,14 +25,7 @@
   <!-- PARALLAX LAYER 1 --> 
     <header id="section-1" class="parallax-section">
       <div class="overlay parallax-layer parallax-layer-base">
-        <div class="flex-center">
-          <h1 class="app-title">DEMOLISH</h1>
-        </div>
-        <div class="header-scroll-icon flex-center">
-          <a href="#menu">
-            <i class="fa fa-angle-double-down" aria-hidden="true"></i>
-          </a>
-        </div>
+        <h1 class="app-title flex-center">DEMOLISH</h1>
       </div>
 
       <div class="parallax-layer parallax-layer-back">
@@ -44,112 +37,72 @@
     <main id="section-2" class="menu container">
 
       <section id="menu" class="menu-container col col-md-9">
-        <!-- Populated menu items -->
-        <span><h3>Menu</h3></span>
+        <h3>Menu</h3>
 
         <section id="appetizers" class="menu-course row">
-          <div id="app-the-header" class="menu-course__heading">
-            <span><h4>Appetizers</h4></span>
-          </div>
+          <h4>Appetizers</h4>
 
           <article data-item-id="1" data-item-name="chicken" class="menu-item col col-md-4">
-            <div class=""><!-- ITEM image, name, description price -->
-            <!-- <img class="chicken" src="./images/chicken-wings.jpg" /> -->
-            Chicken Wings
-              <div id="price">Price:</div>
-            </div>
+            <div class="item-name">Chicken Wings</div>
+            <div class="item-price">Price:</div>
           </article>
 
           <article data-item-id="2" data-item-name="fries" class="menu-item col col-md-4">
-            <div class="">
-            <!-- ITEM image, name, description price -->
-            Fries
-              <div id="price">Price:</div>
-            </div>
+            <div class="item-name">Fries</div>
+            <div class="item-price">Price:</div>
           </article>
 
           <article data-item-id="3" data-item-name="brushcetta" class="menu-item col col-md-4">
-            <div class="">
-            <!-- ITEM image, name, description price -->
-            Bruschetta
-              <div id="price">Price:</div>
-            </div>
+            <div class="item-name">Bruschetta</div>
+            <div class="item-price">Price:</div>
           </article>
         </section>
 
         <section id="mains" class="menu-course">
-          <div id="mains-the-header" class="menu-course__heading">
-            <span><h4>Mains</h4></span>
-          </div>
+          <h4>Mains</h4>
 
           <article data-item-id="4" data-item-name="pizza" class="menu-item col col-md-4">
-            <div class="">
-            <!-- ITEM image, id, description price -->
-            <!-- <img class="chicken" src="./images/chicken-wings.jpg" /> -->
-            Pizza
-              <div id="price">Price:</div>
-            </div>
+            <div class="item-name">Pizza</div>
+            <div class="item-price">Price:</div>
           </article>
 
           <article data-item-id="5" data-item-name="tacos" class="menu-item col col-md-4">
-            <div class="">
-            <!-- ITEM image, id, description price -->
-            Fish Tacos
-              <div id="price">Price:</div>
-            </div>
+            <div class="item-name">Fish Tacos</div>
+            <div class="item-price">Price:</div>
           </article>
 
           <article data-item-id="6" data-item-name="burger" class="menu-item col col-md-4">
-            <div class="">
-            <!-- ITEM image, name, description price -->
-            Vegan Burger
-              <div id="price">Price:</div>
-            </div>
+            <div class="item-name">Vegan Burger</div>
+            <div class="item-price">Price:</div>
           </article>
         </section>
 
         <section id="dessert" class="menu-course">
-          <div id="app-the-header" class="menu-course__heading">
-            <span><h4>Desserts</h4></span>
-          </div>
+          <h4>Desserts</h4>
 
           <article data-item-id="7" data-item-name="blueberry-pizza" class="menu-item col col-md-4">
-            <div class=""><!-- ITEM image, id, description price -->
-            <!-- <img class="chicken" src="./images/chicken-wings.jpg" /> -->
-            Blueberry Dessert Pizza
-              <div id="price">Price:</div>
-            </div>
+            <div class="item-name">Blueberry Dessert Pizza</div>
+            <div class="item-price">Price:</div>
           </article>
 
           <article data-item-id="8" data-item-name="cinnamon-bun" class="menu-item col col-md-4">
-            <div class="">
-            <!-- ITEM image, id, description price -->
-            Cinnamon Bun
-              <div id="price">Price:</div>
-            </div>
+            <div class="item-name">Cinnamon Bun</div>
+            <div class="item-price">Price:</div>
           </article>
 
           <article data-item-id="9" data-item-name="lava-cake" class="menu-item col col-md-4">
-            <div class="">
-            <!-- ITEM image, id, description price -->
-            Chocolate Lava Cake
-            <div id="price">Price:</div>
-            </div>
-
+            <div class="item-name">Chocolate Lava Cake</div>
+            <div class="item-price">Price:</div>
           </article>
         </section>
       </section>
 
       <aside class="order-cart col col-md-3">
-        <!-- Real time order form -->
-
         <div class="address-hours">
-          <span>
           <i class="fa fa-map-marker" aria-hidden="true"></i>
-
           46 Spadina Avenue, Toronto ON M5V 2H8
-          </span>
           <br/>
+          <i class="fa fa-clock-o" aria-hidden="true"></i>
           Delivery Hours: 11am - 10pm
         </div>
 
@@ -157,38 +110,9 @@
           <h3>Your Order</h3>
 
           <ul class="cart-items">
-
-<!-- TEMPORARY HARD-CODED CART ITEMS -->
-
-  <li data-cart-item="pizza">
-        <h3>Pizza</h3>
-        <div class="remove-item">
-          <i class="fa fa-times" aria-hidden="true"></i>
-        </div>
-        <div class="cart-qty pizza">
-          <span class="reduce-item"> 
-            <i class="fa fa-window-minimize" aria-hidden="true"></i>
-          </span>
-
-          Qty: 
-            <span class="cart-item__qty pizza">6</span>
-        </div>
-      </li>
-
-<!--/ TEMPORARY HARD-CODED CART ITEMS -->
-
-
-
           </ul>
-        <!-- On click of menu-item, append item, price and qty here -->
 
-        <!-- Subtotal: $ EJS
-          Tax: $
-          Delivery Fee: $
-          Total: $
-         -->
-
-         <input type="button" value="Checkout"/>
+         <input type="button" class="btn btn-default" value="Checkout"/>
         </div>
       </aside>
     </main>
@@ -273,12 +197,11 @@
     </footer>
 
   </div>
-  <!--/ PARALLAX WRAPPER -->
 
-    <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
-    <script type="text/javascript" src="/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://use.fontawesome.com/e957f15459.js"></script>
-    <script src="/scripts/app.js"></script>
+  <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+  <script type="text/javascript" src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/e957f15459.js"></script>
+  <script src="/scripts/app.js"></script>
 
 </body>
 
