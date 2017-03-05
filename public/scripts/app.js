@@ -30,12 +30,17 @@ $(() => {
     return Math.round(finalSubtotal * 100) / 100;
   }
 
-  var getTotal = function (subtotal) {
+  var getTax = function (subtotal) {
+    var total = getSubtotal(subtotal);
+    var tax = 0.13;
+
+    return Math.round((total * tax) * 100) / 100;
+  }
+
+  var getTotal = function (subtotal, tax) {
     var finalSubtotal = getSubtotal(subtotal);
-    var tax = 1.13;
-    var total = finalSubtotal * tax;
     
-    return total;
+    return Math.round((finalSubtotal + tax) * 100) / 100;
   }
 
   // add new item to cart
@@ -73,6 +78,10 @@ $(() => {
       </li>`;
 
       $cartItems.append(cartItem);
+
+      $('.sub-total').text(getSubtotal(subtotal));
+      $('.tax').text(getTax(subtotal));
+      $('.total').text(getTotal(subtotal, getTax(subtotal)));
     } else {
       // update quantity in object
       currentOrder[itemName]['qty'] += 1;
@@ -86,6 +95,10 @@ $(() => {
       // update cart on browser
       cartItem.text(cartItemQty);
       cartItemPrice.text(String(newPrice).slice(0,5));
+
+      $('.sub-total').text(getSubtotal(subtotal));
+      $('.tax').text(getTax(subtotal));
+      $('.total').text(getTotal(subtotal, getTax(subtotal)));
     }
 
     console.log(getSubtotal(subtotal));
