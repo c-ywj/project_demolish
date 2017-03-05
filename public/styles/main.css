@@ -103,9 +103,13 @@ a:hover, a:active {
   display: block;
 }
 
+/* Modal */
+.modal-content {
+  z-index: 999;
+}
+
 /* Footer */
 
-/*.menu, */
 footer {
   padding: 5em 0 0 0;
 }
