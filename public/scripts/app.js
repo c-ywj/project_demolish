@@ -59,11 +59,10 @@ $(() => {
       subtotal.push(parseFloat(itemPrice));
 
       var cartItem = `<li data-cart-item="${itemName}">
-        <div>
-          <span class="remove-item"><i class="fa fa-times" aria-hidden="true"></i></span>
-          ${fullItemName}
-          $<span class="item-qty-price ${itemName}">${itemPrice}</span>
-        </div>
+        <span class="remove-item"><i class="fa fa-times" aria-hidden="true"></i></span>
+        ${fullItemName}
+        $<span class="item-qty-price ${itemName}">${itemPrice}</span>
+
         <div class="cart-qty ${itemName}">
           Qty: 
           
@@ -103,18 +102,24 @@ $(() => {
 
     console.log(getSubtotal(subtotal));
 
+
+    $('.remove-item i').on('click', function (ev) {
+      $(this).parent().parent().remove();
+      delete currentOrder[itemName];
+    });
+
   });
 
   // remove item from cart
-  var $removeItem = $('.remove-item');
+  // var $removeItem = $('.remove-item');
 
-  $removeItem.on('click', 'div', function(e) {
-    let cartItem = $(e.currentTarget).parent().attr("data-cart-item");
+  // $removeItem.on('click', 'div', function(e) {
+  //   let cartItem = $(e.currentTarget).parent().attr("data-cart-item");
 
-    console.log(cartItem);
+  //   console.log(cartItem);
 
-    delete currentOrder[cartItem];
-    cartItem.remove();
+  //   delete currentOrder[cartItem];
+  //   cartItem.remove();
     
     // console.log(currCartItem);
 
@@ -126,7 +131,7 @@ $(() => {
 
     // delete currentOrder[currCartItem];
     // console.log('currCartItem: ', currCartItem);
-  });
+  // });
 
 
   // reduce item qty from cart
