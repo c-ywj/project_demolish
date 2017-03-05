@@ -4,16 +4,38 @@ $(() => {
   $orderCart.hide();
   
   var currentOrder = {};
+  var subtotal = [];
 
   // update item price in cart based on qty
   var pricePerQty = function(originalPrice, currItemPrice) {
-    var price = parseFloat(originalPrice);
+    var price = Math.round(parseFloat(originalPrice) * 100) / 100;
+    subtotal.push(price);
 
     function newPrice(currItemPrice) { 
-      price += parseFloat(currItemPrice);
-      return parseFloat(price);
+      price += Math.round(parseFloat(currItemPrice) * 100) / 100;
+      return Math.round(parseFloat(price) * 100) / 100;
     }
+    // subtotal.push(newPrice(currItemPrice));
+    console.log(subtotal);
     return newPrice(currItemPrice);
+  }
+
+  var getSubtotal = function(subtotal) {
+    var finalSubtotal = 0;
+
+    for (var i = 0; i < subtotal.length; i++) {
+      finalSubtotal += subtotal[i];
+    }
+
+    return Math.round(finalSubtotal * 100) / 100;
+  }
+
+  var getTotal = function (subtotal) {
+    var finalSubtotal = getSubtotal(subtotal);
+    var tax = 1.13;
+    var total = finalSubtotal * tax;
+    
+    return total;
   }
 
   // add new item to cart
@@ -29,6 +51,7 @@ $(() => {
 
     if(!currentOrder[itemName]) {
       currentOrder[itemName] = {itemId: itemId, qty: 1};
+      subtotal.push(parseFloat(itemPrice));
 
       var cartItem = `<li data-cart-item="${itemName}">
         <div>
@@ -64,6 +87,9 @@ $(() => {
       cartItem.text(cartItemQty);
       cartItemPrice.text(String(newPrice).slice(0,5));
     }
+
+    console.log(getSubtotal(subtotal));
+
   });
 
   // remove item from cart
