@@ -17,57 +17,76 @@ $(() => {
 
       let cartItem = `<li data-cart-item="${itemName}">
         <h3>${itemName}</h3>
-        <div class="remove-item">
-          <i class="fa fa-times" aria-hidden="true"></i>
-        </div>
+        <span>
+          <i class="remove-item fa fa-times" aria-hidden="true"></i>
+        </span>
         <div class="cart-qty ${itemName}">
+          Qty: 
+          
+          <span class="cart-item__qty ${itemName}">
+            ${currentOrder[itemName]['qty']}
+          </span>
+
           <span class="reduce-item"> 
             <i class="fa fa-window-minimize" aria-hidden="true"></i>
           </span>
-
-          Qty: 
-            <span class="cart-item__qty ${itemName}">${currentOrder[itemName]['qty']}</span>
         </div>
       </li>`;
 
       $cartItems.append(cartItem);
     } else {
       currentOrder[itemName]['qty'] += 1;
-
+      let currItemQty = currentOrder[itemName]['qty'];
       let someNum = $('.cart-qty').find(`.${itemName}`);
-      someNum.remove();
-      let update = `<span class="cart-item__qty ${itemName}">${currentOrder[itemName]['qty']}</span>`;
-      
-      $('.cart-qty.' + itemName).append(update);
+
+      someNum.text(currItemQty);
     }
+  });
 
 
-    // remove item from cart
-    $('.remove-item').on('click', function(e) {
-      let currCartItem = $(e.target).parent().parent().attr('data-cart-item');
-      $(e.target).parent().parent().remove();
+  // remove item from cart
+  $('.remove-item').on('click', function(e) {
+    // let currCartItem = $(e.currentTarget).parent().attr('data-cart-item');
+    // let currCartItem = $(e.currentTarget);
+    let this1 = $(e.currentTarget).parent().attr("data-cart-item");
 
-      delete currentOrder[currCartItem];
-      console.log('currCartItem: ', currCartItem);
-    });
+    console.log(this1);
 
-    // reduce item qty from cart
-    $('.reduce-item').on('click', function(e) {
+    delete currentOrder[this1];
+    this1.remove();
+    
+    // console.log(currCartItem);
 
-      // let itemQty = currentOrder[itemName]['qty'];
-      // itemQty - 1;
+    // let itemDataAtt = currCartItem.parent().attr("data-cart-item");
 
-      currentOrder[itemName]['qty'] - 1;
+    // console.log(currCartItem);
+    // console.log(itemDataAtt);
+    // $(e.target).parent().parent().remove();
 
-      let someNum = $('.cart-qty').find(`.${itemName}`);
-      someNum.remove();
-      let update = `<span class="cart-item__qty ${itemName}">${currentOrder[itemName]['qty']}</span>`;
-      
-      $('.cart-qty.' + itemName).append(update);
+    // delete currentOrder[currCartItem];
+    // console.log('currCartItem: ', currCartItem);
+  });
 
-      console.log(currentOrder);
-    });
-  
+
+  // reduce item qty from cart
+  $('.reduce-item').on('click', function(e) {
+
+    let itemQty = currentOrder[itemName]['qty'];
+    console.log(`ITEM QTY: ${itemQty}`);
+
+    itemQty --;
+
+    console.log(`UPDATED ITEM QTY`, itemQty);
+
+    // currentOrder[itemName]['qty'] - 1;
+
+    let someNum = $('.cart-qty').find(`.${itemName}`);
+    someNum.remove();
+    let update = `<span class="cart-item__qty ${itemName}">${currentOrder[itemName]['qty']}</span>`;
+    
+    $('.cart-qty.' + itemName).append(update);
+
+    console.log(currentOrder);
   });
 
 });
