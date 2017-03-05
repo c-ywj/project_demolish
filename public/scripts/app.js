@@ -12,7 +12,7 @@ $(() => {
     var price = Math.round(parseFloat(originalPrice) * 100) / 100;
     subtotal.push(price);
 
-    function newPrice(currItemPrice) { 
+    function newPrice(currItemPrice) {
       price += Math.round(parseFloat(currItemPrice) * 100) / 100;
       return Math.round(parseFloat(price) * 100) / 100;
     }
@@ -41,7 +41,7 @@ $(() => {
 
   var getTotal = function (subtotal, tax) {
     var finalSubtotal = getSubtotal(subtotal);
-    
+
     return Math.round((finalSubtotal + tax) * 100) / 100;
   }
 
@@ -122,6 +122,10 @@ $(() => {
 
   console.log(currentOrder);
   });
+
+  $('.order-cart input').on('click', function (ev) {
+
+  })
 
 });
 

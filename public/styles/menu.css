@@ -1,0 +1,78 @@
+article[data-item-name='chicken'] {
+    background: url(/images/chicken-wings.jpg) no-repeat center;
+    background-size: cover;
+    height: 150px;
+}
+
+article[data-item-name='fries'] {
+    background: url(/images/fries.jpg) no-repeat center;
+    background-size: cover;
+    height: 150px;
+}
+
+article[data-item-name='brushcetta'] {
+    background: url(/images/bruschetta.jpg) no-repeat center;
+    background-size: cover;
+    height: 150px;
+}
+
+article[data-item-name='pizza'] {
+    background: url(/images/pizza.jpg) no-repeat center;
+    background-size: cover;
+    height: 150px;
+}
+
+article[data-item-name='tacos'] {
+    background: url(/images/fishtacos.jpg) no-repeat center;
+    background-size: cover;
+    height: 150px;
+}
+
+article[data-item-name='burger'] {
+    background: url(/images/veganburger.jpg) no-repeat center;
+    background-size: cover;
+    height: 150px;
+}
+
+article[data-item-name='blueberry-pizza'] {
+    background: url(/images/blueberrypizza.jpg) no-repeat center;
+    background-size: cover;
+    height: 150px;
+}
+
+article[data-item-name='cinnamon-bun'] {
+    background: url(/images/cinammonroll.jpg) no-repeat center;
+    background-size: cover;
+    height: 150px;
+}
+
+article[data-item-name='lava-cake'] {
+    background: url(/images/lavacake.jpg) no-repeat center;
+    background-size: cover;
+    height: 150px;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+    background: url(/images/fishtacos.jpg) no-repeat center;
+    background-size: cover;
+    height: 150px;*/
