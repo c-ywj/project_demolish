@@ -32,7 +32,7 @@ $(() => {
 
       var cartItem = `<li data-cart-item="${itemName}">
         <div>
-          <i class="remove-item fa fa-times" aria-hidden="true"></i>
+          <span class="remove-item"><i class="fa fa-times" aria-hidden="true"></i></span>
           ${fullItemName}
           $<span class="item-qty-price ${itemName}">${itemPrice}</span>
         </div>
@@ -43,7 +43,7 @@ $(() => {
             ${currentOrder[itemName]['qty']}
           </span>
 
-          <span class="reduce-item"> 
+          <span class="reduce-item-qty"> 
             <i class="fa fa-window-minimize" aria-hidden="true"></i>
           </span>
         </div>
@@ -51,36 +51,31 @@ $(() => {
 
       $cartItems.append(cartItem);
     } else {
+      // update quantity in object
       currentOrder[itemName]['qty'] += 1;
 
       var currCartItemPrice = $(`.item-qty-price.${itemName}`).text();
       var newPrice = pricePerQty(itemPrice, currCartItemPrice);
-
       var cartItemQty = currentOrder[itemName]['qty'];
       var cartItem = $('.cart-qty').find(`.${itemName}`);
       var cartItemPrice = $(`.item-qty-price.${itemName}`);
 
-
-      console.log('CART ITEM PRICE: ', newPrice);
-
+      // update cart on browser
       cartItem.text(cartItemQty);
       cartItemPrice.text(String(newPrice).slice(0,5));
-
-      console.log(currentOrder);
     }
   });
 
-
   // remove item from cart
-  $('.remove-item').on('click', function(e) {
-    // let currCartItem = $(e.currentTarget).parent().attr('data-cart-item');
-    // let currCartItem = $(e.currentTarget);
-    let this1 = $(e.currentTarget).parent().attr("data-cart-item");
+  var $removeItem = $('.remove-item');
 
-    console.log(this1);
+  $removeItem.on('click', 'div', function(e) {
+    let cartItem = $(e.currentTarget).parent().attr("data-cart-item");
 
-    delete currentOrder[this1];
-    this1.remove();
+    console.log(cartItem);
+
+    delete currentOrder[cartItem];
+    cartItem.remove();
     
     // console.log(currCartItem);
 
@@ -96,7 +91,7 @@ $(() => {
 
 
   // reduce item qty from cart
-  $('.reduce-item').on('click', function(e) {
+  $('.reduce-item-qty').on('click', function(e) {
 
     let itemQty = currentOrder[itemName]['qty'];
     console.log(`ITEM QTY: ${itemQty}`);
