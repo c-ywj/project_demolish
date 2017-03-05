@@ -40,6 +40,8 @@ a:hover, a:active {
 .app-title {
   font-size: 5em;
   text-shadow: 5px 5px 2px #000;
+  filter: invert();
+  opacity: 0.6;
 }
 
 .header-scroll-icon {

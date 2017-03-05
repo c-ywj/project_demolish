@@ -108,7 +108,7 @@
 
 .flex-center {
   position: relative;
-  top: 50%;
+  top: 25%;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
