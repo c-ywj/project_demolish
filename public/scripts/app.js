@@ -11,7 +11,9 @@ $(() => {
 
     var itemId = $(ev.currentTarget).attr("data-item-id");
     var itemName = $(ev.currentTarget).attr("data-item-name");
-    // var 
+    var fullItemName = $(ev.currentTarget).find(".item-name").text();
+
+    console.log(fullItemName);
 
     if(!currentOrder[itemName]) {
       currentOrder[itemName] = {itemId: itemId, qty: 1};
@@ -19,7 +21,7 @@ $(() => {
       let cartItem = `<li data-cart-item="${itemName}">
         <span>
           <i class="remove-item fa fa-times" aria-hidden="true"></i>
-          ${itemName}
+          ${fullItemName}
         </span>
         <div class="cart-qty ${itemName}">
           Qty: 
