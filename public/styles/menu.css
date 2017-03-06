@@ -9,6 +9,7 @@
 .menu-item {
     margin: 0.5em;
     height: 225px;
+    border-radius: 7px
 }
 
 .menu-overlay {
@@ -18,6 +19,7 @@
     font-size: 1.5em;
     color: #fff;
     display: none;
+    border-radius: 7px
 }
 
 .item-name {
