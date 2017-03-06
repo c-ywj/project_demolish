@@ -84,9 +84,9 @@ $(() => {
 
       $cartItems.append(cartItem);
 
-      $('.sub-total').text(getSubtotal(subtotal));
-      $('.tax').text(getTax(subtotal));
-      $('.total').text(getTotal(subtotal, getTax(subtotal)));
+      $('.sub-total').text(`$${getSubtotal(subtotal)}`);
+      $('.tax').text(`$${getTax(subtotal)}`);
+      $('.total').text(`$${getTotal(subtotal, getTax(subtotal))}`);
 
     } else {
       // update quantity in object
@@ -102,9 +102,9 @@ $(() => {
       cartItem.text(cartItemQty);
       cartItemPrice.text(String(newPrice).slice(0,5));
 
-      $('.sub-total').text(getSubtotal(subtotal));
-      $('.tax').text(getTax(subtotal));
-      $('.total').text(getTotal(subtotal, getTax(subtotal)));
+      $('.sub-total').text(`$${getSubtotal(subtotal)}`);
+      $('.tax').text(`$${getTax(subtotal)}`);
+      $('.total').text(`$${getTotal(subtotal, getTax(subtotal))}`);
     }
 
     $('.remove-item i').on('click', function (ev) {
@@ -139,6 +139,16 @@ $(() => {
       data: orderForm.serialize()
     })
   });
+
+  $('.modal-footer button').on('click', function(e) {
+    currentOrder = {};
+    subtotal = [0.00];
+    $('.cart-items li').remove();
+    $('.sub-total').text(`$${getSubtotal(subtotal)}.00`);
+    $('.tax').text(`$${getTax(subtotal)}.00`);
+    $('.total').text(`$${getTotal(subtotal, getTax(subtotal))}.00`);
+    $orderCart.hide();
+  })
 
 
 });
