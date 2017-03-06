@@ -104,6 +104,7 @@ a:hover, a:active {
   text-align: center;
   padding: 10px;
   margin: 0 0 1em 0;
+  min-height: 170px;
 }
 
 .order-cart .btn {
@@ -124,7 +125,7 @@ footer {
 
 .placeholder-cards {
   min-height: 400px;
-  height: 50vh;
+  min-height: 50vh;
 }
 
 .footer__app-details {
@@ -153,4 +154,10 @@ footer {
 
 .modal-footer {
   text-align: center;
+}
+
+.order-total {
+  margin: 0 0 10px 0;
+  border-bottom: 1px dotted #999;
+  padding: 0 0 10px 5px;
 }
