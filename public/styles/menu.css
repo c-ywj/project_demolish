@@ -1,62 +1,119 @@
-article[data-item-name='chicken'] {
+.menu-container h3, h4 {
+  font-family: 'Black Ops One', cursive;
+}
+
+.menu-container h3 {
+  font-size: 3em;
+}
+
+.menu-item {
+    margin: 0.5em;
+    height: 225px;
+}
+
+.menu-overlay {
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    text-align: center;
+    font-size: 1.5em;
+    color: #fff;
+    display: none;
+}
+
+.item-name {
+    font-size: 1.5em;
+    padding-top: 25px;
+}
+
+div[data-item-name='chicken'] {
     background: url(/images/chicken-wings.jpg) no-repeat center;
     background-size: cover;
-    height: 150px;
 }
 
-article[data-item-name='fries'] {
+div[data-item-name='fries'] {
     background: url(/images/fries.jpg) no-repeat center;
     background-size: cover;
-    height: 150px;
 }
 
-article[data-item-name='brushcetta'] {
+div[data-item-name='brushcetta'] {
     background: url(/images/bruschetta.jpg) no-repeat center;
     background-size: cover;
-    height: 150px;
 }
 
-article[data-item-name='pizza'] {
+div[data-item-name='sushi'] {
+    background: url(/images/sushi-rolls.jpg) no-repeat center;
+    background-size: cover;
+}
+
+div[data-item-name='flatbread'] {
+    background: url(/images/flatbred.jpg) no-repeat center;
+    background-size: cover;
+}
+
+div[data-item-name='wrap'] {
+    background: url(/images/rainbow-wrap.jpg) no-repeat center;
+    background-size: cover;
+}
+
+div[data-item-name='pizza'] {
     background: url(/images/pizza.jpg) no-repeat center;
     background-size: cover;
-    height: 150px;
 }
 
-article[data-item-name='tacos'] {
+div[data-item-name='tacos'] {
     background: url(/images/fishtacos.jpg) no-repeat center;
     background-size: cover;
-    height: 150px;
 }
 
-article[data-item-name='burger'] {
+div[data-item-name='burger'] {
     background: url(/images/veganburger.jpg) no-repeat center;
     background-size: cover;
-    height: 150px;
 }
 
-article[data-item-name='blueberry-pizza'] {
+div[data-item-name='cannelloni'] {
+    background: url(/images/cannelloni.jpg) no-repeat center;
+    background-size: cover;
+}
+
+div[data-item-name='linguine'] {
+    background: url(/images/linguine.jpg) no-repeat center;
+    background-size: cover;
+}
+
+div[data-item-name='paella'] {
+    background: url(/images/paella.jpg) no-repeat center;
+    background-size: cover;
+}
+
+div[data-item-name='blueberry-pizza'] {
     background: url(/images/blueberrypizza.jpg) no-repeat center;
     background-size: cover;
-    height: 150px;
 }
 
-article[data-item-name='cinnamon-bun'] {
+div[data-item-name='cinnamon-bun'] {
     background: url(/images/cinammonroll.jpg) no-repeat center;
     background-size: cover;
-    height: 150px;
 }
 
-article[data-item-name='lava-cake'] {
+div[data-item-name='lava-cake'] {
     background: url(/images/lavacake.jpg) no-repeat center;
     background-size: cover;
-    height: 150px;
-};
+}
 
+div[data-item-name='cake'] {
+    background: url(/images/strawberry-cake.jpg) no-repeat center;
+    background-size: cover;
+}
 
+div[data-item-name='muffins'] {
+    background: url(/images/hot-cross-muffins.jpg) no-repeat center;
+    background-size: cover;
+}
 
-
-
-
+div[data-item-name='calzone'] {
+    background: url(/images/chocolate-calzone.jpg) no-repeat center;
+    background-size: cover;
+}
 
 
 
