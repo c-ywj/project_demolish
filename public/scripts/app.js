@@ -3,6 +3,50 @@ $(() => {
 
   let currentOrder = {};
 
+<<<<<<< Updated upstream
+=======
+  $orderCart.hide();
+
+  // update item price in cart based on qty
+  var pricePerQty = function(originalPrice, currItemPrice) {
+    var price = Math.round(parseFloat(originalPrice) * 100) / 100;
+    subtotal.push(price);
+
+    function newPrice(currItemPrice) {
+      price += Math.round(parseFloat(currItemPrice) * 100) / 100;
+      return Math.round(parseFloat(price) * 100) / 100;
+    }
+    // subtotal.push(newPrice(currItemPrice));
+    console.log(subtotal);
+    return newPrice(currItemPrice);
+
+  }
+
+  var getSubtotal = function(subtotal) {
+    var finalSubtotal = 0;
+
+    for (var i = 0; i < subtotal.length; i++) {
+      finalSubtotal += subtotal[i];
+    }
+
+    return Math.round(finalSubtotal * 100) / 100;
+  }
+
+  var getTax = function (subtotal) {
+    var total = getSubtotal(subtotal);
+    var tax = 0.13;
+
+    return Math.round((total * tax) * 100) / 100;
+  }
+
+  var getTotal = function (subtotal, tax) {
+    var finalSubtotal = getSubtotal(subtotal);
+
+    return Math.round((finalSubtotal + tax) * 100) / 100;
+  }
+
+  // add new item to cart
+>>>>>>> Stashed changes
   $('.menu-item').on('click', function (ev) {
     var itemId = $(ev.currentTarget).attr("data-item-id");
     var itemName = $(ev.currentTarget).attr("data-item-name");
@@ -85,6 +129,7 @@ $('article').on('click', function (ev) {
   var item = {"itemId": itemId};
   currentOrder.items.push(item);
   console.log(currentOrder);
+<<<<<<< Updated upstream
 });
 
 // <<<<<<< HEAD
@@ -171,4 +216,23 @@ $('article').on('click', function (ev) {
 
 
 // >>>>>>> 69794a45df13ffdbb6b6821649220a952767dc53
+>>>>>>> Stashed changes
+=======
+  });
+
+  let orderForm = $('.customer-info');
+
+  $('.customer-info').on('submit', function(e){
+  e.preventDefault();
+  $.ajax({
+    method: 'POST',
+    url: '/food',
+    data: orderForm.serialize()
+  })
+  });
+
+});
+
+
+
 >>>>>>> Stashed changes
