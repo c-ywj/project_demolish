@@ -127,6 +127,63 @@ twilio.messages.create({
 });
 
 
+// for(var keys in currentOrder){
+//   var a = keys;
+//   //console.log("THE KEY", a);
+//   var b = currentOrder[keys].qty;
+//   //console.log(b);
+//   console.log("You have received an order for " + b + " " + a);
+// }
+
+  //MESSAGE TO RESTAURANT
+for(var keys in currentOrder){
+  var a = keys;
+  var b = currentOrder[keys].qty;
+twilio.messages.create({
+  to:   '+16478940916',
+  from: '+16473606821',
+  body: `'The following order has been placed for pickup: ${b} ${a}'`
+
+}, function(err, message){
+  //console.log("msg: ", message)
+  //console.log("err: ", err)
+  if(err){
+    console.error(err.message);
+  }
+  console.log(message);
+  console.log(body);
+})
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// for(var keys in currentOrder){
+//   var a = currentOrder.keys;
+//   var b = currentOrder.keys.qty;
+//   console.log("You have received an order for " + b + a);
+// }
+
+>>>>>>> feature/post-route
 
 
 // for(var keys in currentOrder){

@@ -127,5 +127,17 @@ $(() => {
 
   })
 
-});
+  let orderForm = $('.customer-info');
 
+  $('.customer-info').on('submit', function(e){
+    e.preventDefault();
+
+    $.ajax({
+      method: 'POST',
+      url: '/food',
+      data: orderForm.serialize()
+    })
+  });
+
+
+});

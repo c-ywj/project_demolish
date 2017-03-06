@@ -125,15 +125,14 @@
             Total: <span class="total"></span>
           </div>
 
-          <form action="/orders" method="post" class="customer-info">
+          <form action="/food" method="post" class="customer-info">
              <label for="customer-name">Name:</label>
              <input type="text" name="customer-name" placeholder="Enter your name here" maxlength="100">
              <br>
              <label for="customer-phone">Phone:</label>
-             <input type="text" name="customer-phone" placeholder="Enter your phone here" maxlength="70">
+             <input type="text" name="customer_phone" placeholder="Enter your phone here" maxlength="70">
+             <input type="submit" class="btn btn-default" data-toggle="modal" data-target="#myModal" value="Checkout"/>
           </form>
-          <br>
-          <input type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal" value="Checkout"/>
         </div>
       </aside>
 
