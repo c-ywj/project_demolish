@@ -2,10 +2,18 @@ $(() => {
 
   var $orderCart    = $('.order-items');
   var $cartItems    = $('.cart-items');
+  var $menuItemBox  = $('.menu-course article');
   var currentOrder  = {};
   var subtotal      = [];
 
   $orderCart.hide();
+
+  $menuItemBox.on('mouseenter', function(e) {
+    $(e.currentTarget).find('.menu-overlay').fadeIn(600);
+  });
+  $menuItemBox.on('mouseleave', function(e) {
+    $(e.currentTarget).find('.menu-overlay').fadeOut(600);
+  });
 
   // update item price in cart based on qty
   var pricePerQty = function(originalPrice, currItemPrice) {
