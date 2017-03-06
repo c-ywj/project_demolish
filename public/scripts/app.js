@@ -9,40 +9,37 @@ $(() => {
 
   // update item price in cart based on qty
   var pricePerQty = function(originalPrice, currItemPrice) {
-    var price = Math.round(parseFloat(originalPrice) * 100) / 100;
+    var price     = Math.round(parseFloat(originalPrice) * 100) / 100;
+
     subtotal.push(price);
 
     function newPrice(currItemPrice) {
       price += Math.round(parseFloat(currItemPrice) * 100) / 100;
       return Math.round(parseFloat(price) * 100) / 100;
     }
-    // subtotal.push(newPrice(currItemPrice));
-    console.log(subtotal);
-    return newPrice(currItemPrice);
 
+    return newPrice(currItemPrice);
   }
 
-  var getSubtotal = function(subtotal) {
+
+  var getSubtotal     = function(subtotal) {
     var finalSubtotal = 0;
 
     for (var i = 0; i < subtotal.length; i++) {
-      finalSubtotal += subtotal[i];
+      finalSubtotal  += subtotal[i];
     }
-
     return Math.round(finalSubtotal * 100) / 100;
   }
 
-  var getTax = function (subtotal) {
+  var getTax  = function (subtotal) {
     var total = getSubtotal(subtotal);
-    var tax = 0.13;
-
-    return Math.round((total * tax) * 100) / 100;
+    var tax   = 0.13;
+    return      Math.round((total * tax) * 100) / 100;
   }
 
-  var getTotal = function (subtotal, tax) {
+  var getTotal        = function (subtotal, tax) {
     var finalSubtotal = getSubtotal(subtotal);
-
-    return Math.round((finalSubtotal + tax) * 100) / 100;
+    return              Math.round((finalSubtotal + tax) * 100) / 100;
   }
 
   // add new item to cart
@@ -72,7 +69,7 @@ $(() => {
             ${currentOrder[itemName]['qty']}
           </span>
           <span class="reduce-item-qty">
-            <i class="fa fa-window-minimize" aria-hidden="true"></i>
+            <button type="button" class="btn btn-danger">-1</button>
           </span>
         </div>
       </li>`;
@@ -82,6 +79,7 @@ $(() => {
       $('.sub-total').text(getSubtotal(subtotal));
       $('.tax').text(getTax(subtotal));
       $('.total').text(getTotal(subtotal, getTax(subtotal)));
+
     } else {
       // update quantity in object
       currentOrder[itemName]['qty'] += 1;
@@ -101,8 +99,6 @@ $(() => {
       $('.total').text(getTotal(subtotal, getTax(subtotal)));
     }
 
-    console.log(getSubtotal(subtotal));
-
     $('.remove-item i').on('click', function (ev) {
       $(this).parent().parent().remove();
       delete currentOrder[itemName];
@@ -110,22 +106,19 @@ $(() => {
 
   });
 
-  $('.reduce-item-qty').on('click', function(e) {
-  let itemQty = currentOrder[itemName]['qty'];
-      itemQty --;
-  console.log(`UPDATED ITEM QTY`, itemQty);
-  // currentOrder[itemName]['qty'] - 1;
-  let someNum = $('.cart-qty').find(`.${itemName}`);
-      someNum.remove();
-  let update  = `<span class="cart-item__qty ${itemName}">${currentOrder[itemName]['qty']}</span>`;
-  $('.cart-qty.' + itemName).append(update);
+  $('.reduce-item-qty i').on('click', function(e) {
+    let itemQty = currentOrder[itemName]['qty'];
+        itemQty --;
+    console.log(`UPDATED ITEM QTY`, itemQty);
+    // currentOrder[itemName]['qty'] - 1;
+    let someNum = $('.cart-qty').find(`.${itemName}`);
+        someNum.remove();
+    let update  = `<span class="cart-item__qty ${itemName}">${currentOrder[itemName]['qty']}</span>`;
+    $('.cart-qty.' + itemName).append(update);
 
-  console.log(currentOrder);
+    console.log(currentOrder);
   });
 
-  $('.order-cart input').on('click', function (ev) {
-
-  })
 
   let orderForm = $('.customer-info');
 
