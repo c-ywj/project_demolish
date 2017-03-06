@@ -147,6 +147,7 @@ $(() => {
     $('.sub-total').text(`$${getSubtotal(subtotal)}.00`);
     $('.tax').text(`$${getTax(subtotal)}.00`);
     $('.total').text(`$${getTotal(subtotal, getTax(subtotal))}.00`);
+    $('.form-control').val('');
     $orderCart.hide();
   })
 

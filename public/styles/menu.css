@@ -2,29 +2,36 @@
   font-family: 'Black Ops One', cursive;
 }
 
-.menu-container h3 {
+/*.menu-container h3 {
   font-size: 3em;
-}
+  font-weight: 200;
+}*/
 
 .menu-item {
     margin: 0.5em;
     height: 225px;
-    border-radius: 7px
+    border-radius: 7px;
 }
 
 .menu-overlay {
     height: 100%;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0,0,0,0.75);
     text-align: center;
     font-size: 1.5em;
     color: #fff;
     display: none;
-    border-radius: 7px
+    border-radius: 7px;
+    padding: 5% 5px 5px 5px;
 }
 
 .item-name {
-    font-size: 1.5em;
-    padding-top: 25px;
+    font-size: 1.25em;
+}
+
+.description {
+    font-size: 0.75em;
+    font-weight: 200;
+    font-style: oblique;
 }
 
 div[data-item-name='chicken'] {
