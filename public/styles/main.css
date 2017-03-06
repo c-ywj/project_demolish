@@ -146,3 +146,11 @@ footer {
 .credentials {
   font-size: 0.5em;
 }
+
+.modal-backdrop {
+  z-index: -1;
+}
+
+.modal-footer {
+  text-align: center;
+}
