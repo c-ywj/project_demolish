@@ -112,6 +112,14 @@ a:hover, a:active {
   display: block;
 }
 
+.order-total {
+  overflow: auto;
+}
+
+.order-total span {
+  float: right;
+}
+
 /* Modal */
 .modal-content {
   z-index: 999;
