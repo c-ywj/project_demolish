@@ -129,6 +129,30 @@ twilio.messages.create({
 // res.redirect("/");
 });
 
+// POST /orders
+
+// body Param - {
+
+//   address: {
+//     type: "string"
+//   },
+
+//   name: {
+//     type: "string"
+//   },
+
+//   menuItems: [
+//     {
+//       name: {
+//         type: "string"
+//       },
+//       prices: {
+
+//       }
+//   }
+//   ]
+// }
+
 app.listen(PORT, () => {
   console.log("Example app listening on port " + PORT);
 });

@@ -130,6 +130,7 @@ $(() => {
 
   let orderForm = $('.customer-info');
 
+// this function is redundant, because there is button in index.ejs form to post
   $('.customer-info').on('submit', function(e){
     e.preventDefault();
 
